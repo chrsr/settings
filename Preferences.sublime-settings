@@ -3,15 +3,15 @@
     "color_scheme": "Packages/User/Espresso Soda.tmTheme",
     "detect_indentation": false,
     "draw_white_space": "all",
+    "font_face": "Menlo",
     "font_size": 13.0,
     "ignored_packages":
     [
-        "Vintage",
-        "ZenCoding"
+        "Vintage"
     ],
     "scroll_past_end": true,
     "tabSize": 4,
-    "theme": "Default.sublime-theme",
+    "theme": "Soda Light.sublime-theme",
     "translate_tabs_to_spaces": true,
     "word_wrap": false
 }
