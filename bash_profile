@@ -4,10 +4,8 @@
 export EDITOR=sub
 export SVN_EDITOR=sub
 
-export GRAILS_HOME=~/Dev/grails/grails-2.1.0/bin/grails
 export NODE_PATH=/usr/local/lib/node
 export PATH=/usr/local/bin:$PATH
-export PATH=$GRAILS_HOME/bin:$PATH
 
 
 # Aliases
@@ -16,21 +14,6 @@ export PATH=$GRAILS_HOME/bin:$PATH
 alias ll="ls -lh"
 alias la="ls -lah"
 alias fn="find . -name"
-
-
-# Grails
-# --------------------------------------------------
-
-alias grails1.3.7="GRAILS_HOME=~/Dev/grails/grails-1.3.7 ~/Dev/grails/grails-1.3.7/bin/grails"
-alias grails1.3.8="GRAILS_HOME=~/Dev/grails/grails-1.3.8 ~/Dev/grails/grails-1.3.8/bin/grails"
-alias grails2.0.1="GRAILS_HOME=~/Dev/grails/grails-2.0.1 ~/Dev/grails/grails-2.0.1/bin/grails"
-alias grails2.0.2="GRAILS_HOME=~/Dev/grails/grails-2.0.2 ~/Dev/grails/grails-2.0.2/bin/grails"
-alias grails2.0.3="GRAILS_HOME=~/Dev/grails/grails-2.0.3 ~/Dev/grails/grails-2.0.3/bin/grails"
-alias grails2.0.4="GRAILS_HOME=~/Dev/grails/grails-2.0.4 ~/Dev/grails/grails-2.0.4/bin/grails"
-alias grails2.1.0="GRAILS_HOME=~/Dev/grails/grails-2.1.0 ~/Dev/grails/grails-2.1.0/bin/grails"
-alias grails1=grails1.3.7
-alias grails=grails2.1.0
-alias run-hr="grails run-app -Djmx=true -Dlis=true -https -Djava.net.preferIPv4Stack=true"
 
 
 # Colours
