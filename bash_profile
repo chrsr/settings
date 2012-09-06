@@ -69,13 +69,13 @@ reset="\[\e[0m\]"
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # Git completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+if [ -f `brew --prefix git`/etc/bash_completion.d/git-prompt.sh ]; then
+    . `brew --prefix git`/etc/bash_completion.d/git-prompt.sh
 fi
 
 # Git prompt
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+if [ -f `brew --prefix git`/etc/bash_completion.d/git-prompt.sh ]; then
+  . `brew --prefix git`/etc/bash_completion.d/git-prompt.sh
   GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
