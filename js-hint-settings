@@ -1,0 +1,13 @@
+"jshint_options":
+{
+    "browser": true,
+    "trailing": true,
+    "curly": true,
+    "debug": true,
+    "immed": true,
+    "jquery": true,
+    "loopfunc": true,
+    "newcap": true,
+    "undef": true,
+    "white": true
+}
