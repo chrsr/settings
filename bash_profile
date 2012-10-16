@@ -14,7 +14,17 @@ export PATH=/usr/local/bin:$PATH
 alias ll="ls -lh"
 alias la="ls -lah"
 alias fn="find . -name"
+alias flush="dscacheutil -flushcache"
 
+
+# Simple Python Server 
+# --------------------------------------------------
+
+function server() {
+    local port="${1:-8000}"
+    open "http://localhost:${port}/"
+    python -m SimpleHTTPServer "$port"
+}
 
 # Colours
 # --------------------------------------------------
@@ -66,8 +76,6 @@ reset="\[\e[0m\]"
 # Git
 # --------------------------------------------------
 
-GIT_PS1_SHOWDIRTYSTATE=true
-
 # Git completion
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
     . `brew --prefix`/etc/bash_completion.d/git-completion.bash
@@ -78,6 +86,8 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
     . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
 fi
+
+export GIT_MERGE_AUTOEDIT=no
 
 # Git Deal or No Deal
 alias dealodrome="git bisect"
