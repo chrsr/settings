@@ -3,7 +3,6 @@
 
 export EDITOR=sub
 export SVN_EDITOR=sub
-
 export NODE_PATH=/usr/local/lib/node
 export PATH=/usr/local/bin:$PATH
 
@@ -15,6 +14,8 @@ alias ll="ls -lh"
 alias la="ls -lah"
 alias fn="find . -name"
 alias flush="dscacheutil -flushcache"
+alias irc="ssh -N devirc"
+alias subl="sub"
 
 
 # Simple Python Server 
@@ -25,6 +26,16 @@ function server() {
     open "http://localhost:${port}/"
     python -m SimpleHTTPServer "$port"
 }
+
+
+# BusterJS + CoffeeScript
+# --------------------------------------------------
+
+function bustercoffee() {
+    coffee -c .
+    buster test -v
+}
+
 
 # Colours
 # --------------------------------------------------
@@ -93,6 +104,14 @@ export GIT_MERGE_AUTOEDIT=no
 alias dealodrome="git bisect"
 alias deal="git bisect good"
 alias no_deal="git bisect bad"
+
+# Pushpop
+function pushpop() {
+    git stash
+    git pull
+    git push
+    git stash pop
+}
 
 
 # Command prompt
