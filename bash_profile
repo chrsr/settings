@@ -1,22 +1,4 @@
-# Exports
-# --------------------------------------------------
-
-export EDITOR=sub
-export SVN_EDITOR=sub
-export NODE_PATH=/usr/local/lib/node
-export PATH=/usr/local/bin:$PATH
-
-
-# Aliases
-# --------------------------------------------------
-
-alias ll="ls -lh"
-alias la="ls -lah"
-alias fn="find . -name"
-alias flush="dscacheutil -flushcache"
-alias irc="ssh -N devirc"
-alias subl="sub"
-
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Simple Python Server 
 # --------------------------------------------------
@@ -27,18 +9,25 @@ function server() {
     python -m SimpleHTTPServer "$port"
 }
 
-
-# BusterJS + CoffeeScript
+# Git
+# * requires git to be installed by homebrew
 # --------------------------------------------------
 
-function bustercoffee() {
-    coffee -c .
-    buster test -v
-}
+# Git completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+    . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
 
+# Git prompt
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+    . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+fi
 
 # Colours
 # --------------------------------------------------
+# First install the tomorrow terminal theme:
+# https://github.com/chriskempson/tomorrow-theme/tree/master/OS%20X%20Terminal
 
 # Regular
 black="\[\e[0;30m\]"
@@ -83,42 +72,8 @@ bg_white="\[\e[47m\]"
 # Reset
 reset="\[\e[0m\]"
 
-
-# Git
-# --------------------------------------------------
-
-# Git completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
-
-# Git prompt
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-    GIT_PS1_SHOWDIRTYSTATE=true
-fi
-
-export GIT_MERGE_AUTOEDIT=no
-
-# Git Deal or No Deal
-alias dealodrome="git bisect"
-alias deal="git bisect good"
-alias no_deal="git bisect bad"
-
-# Pushpop
-function pushpop() {
-    git stash
-    git pull
-    git push
-    git stash pop
-}
-
-
-# Command prompt
-# --------------------------------------------------
-
 # CLI Output
-export CLICOLOR='Yes'
+export CLICOLOR=1
 
 # Prompt
-PS1="${bd_black}\u${bd_white}@${bd_black}\h${bd_white}:${bd_cyan}\w${bd_white}\$(__git_ps1 "[%s]")${black}\$${reset} "
+PS1="${bd_purple}\u${bd_white}@${bd_purple}\h${bd_white}:${bd_cyan}\w${bd_yellow}\$(__git_ps1 "[%s]")${white}\$${reset} "
