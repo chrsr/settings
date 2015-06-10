@@ -10,7 +10,6 @@ function server() {
 }
 
 # Git
-# * requires git to be installed by homebrew
 # --------------------------------------------------
 
 # Git completion
@@ -26,8 +25,6 @@ fi
 
 # Colours
 # --------------------------------------------------
-# First install the tomorrow terminal theme:
-# https://github.com/chriskempson/tomorrow-theme/tree/master/OS%20X%20Terminal
 
 # Regular
 black="\[\e[0;30m\]"
@@ -74,6 +71,17 @@ reset="\[\e[0m\]"
 
 # CLI Output
 export CLICOLOR=1
+export MAVEN_OPTS="-Xms1024m -Xmx1024m -XX:PermSize=1024m"
+
+# export P4CONFIG=$HOME/p4settings.txt
 
 # Prompt
 PS1="${bd_purple}\u${bd_white}@${bd_purple}\h${bd_white}:${bd_cyan}\w${bd_yellow}\$(__git_ps1 "[%s]")${white}\$${reset} "
+
+# nvm
+source ~/.nvm/nvm.sh
+
+#!/bin/bash
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/croberts/.gvm/bin/gvm-init.sh" ]] && source "/Users/croberts/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

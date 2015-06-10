@@ -2,11 +2,11 @@
     "auto_match_enabled": false,
     "bold_folder_labels": true,
     "caret_style": "phase",
-    "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+    "color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
     "detect_indentation": false,
     "draw_white_space": "all",
     "font_face": "Source Code Pro",
-    "font_size": 15.0,
+    "font_size": 16.0,
     "highlight_line": true,
     "ignored_packages":
     [
@@ -16,7 +16,7 @@
     "line_padding_top": 1,
     "scroll_past_end": true,
     "tabSize": 4,
-    "theme": "Soda Dark.sublime-theme",
+    "theme": "Soda Dark 3.sublime-theme",
     "translate_tabs_to_spaces": true,
     "word_wrap": false
 }
