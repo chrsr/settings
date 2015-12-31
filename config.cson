@@ -1,0 +1,23 @@
+"*":
+  "exception-reporting":
+    userId: "f1dd6e5a-4936-5790-1404-c9cf5673ceef"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    disabledPackages: [
+      "linter-eslint"
+    ]
+  editor:
+    invisibles: {}
+    tabLength: 4
+    showInvisibles: true
+    scrollPastEnd: true
+  "spell-check":
+    grammars: [
+      "text.html.basic"
+    ]
+  linter: {}
